@@ -70,8 +70,3 @@ input{
 label{
     position: static;
 }
-#submit:hover
-{
-    background-color: black;
-    color:white;
-}
