@@ -138,6 +138,10 @@ $("#toggle2").click(()=>{
 
 
 })
+$("#submit").click(function(){
+    $("#ulllll").html("")
+})
+
 
 
 
