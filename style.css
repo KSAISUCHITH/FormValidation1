@@ -41,6 +41,9 @@ input{
 #submit{
     width: 150px;
     margin-left: 200px;
+    height: 40px;
+    font-size: 80%;
+    border-radius: 25px;
 }
 
 
@@ -69,4 +72,9 @@ input{
 }
 label{
     position: static;
+}
+#submit:hover
+{
+    background-color: black;
+    color:white;
 }
