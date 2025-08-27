@@ -94,7 +94,20 @@ $("#toggle2").click(()=>{
    else{
     $("#cp").attr('type','password')
     $('#toggle2').html("show")}})
+
+
+
+    $("#fnumber").on("input", function () {
+      
+        this.value = this.value.replace(/\D/g, '');
+
+        // restrict length to 10
+        if (this.value.length > 10) {
+            this.value = this.value.slice(0, 10);
+        }
+    );
    
 
 
    
+
