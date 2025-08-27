@@ -4,21 +4,21 @@ function isEmail(email) {
 }
 
 $("#submit").click(function () {
-   
+    // Reset errors and messages
     abc = "";
     missingfield = "";
     $("#errors").html("");
     $("#success").html("");
     $("#ulllll").html("");
 
-    
+    // Email check
     if ($("#fname").val() == "") {
         missingfield += "<p>• Email is not filled</p>";
     } else if (isEmail($("#fname").val()) == false) {
         abc += "<p>• Email Id is not valid</p>";
     }
 
-   
+    // Phone check
     if ($("#fnumber").val() == "") {
         missingfield += "<p>• Phone-Number is not filled</p>";
     } else {
@@ -50,14 +50,14 @@ $("#submit").click(function () {
         }
     }
 
- 
+    // Confirm password check
     if ($("#cp").val() == "") {
         missingfield += "<p>• Please confirm the password.</p>";
     } else if ($("#fpassword").val() != $("#cp").val()) {
         abc += "<p>• The password does not match</p>";
     }
 
-    
+    // Show result
     if (abc == "" && missingfield == "") {
         $("#success").html("• You have successfully registered");
     } else {
@@ -94,20 +94,13 @@ $("#toggle2").click(()=>{
    else{
     $("#cp").attr('type','password')
     $('#toggle2').html("show")}})
+   
 
 
-
+   
     $("#fnumber").on("input", function () {
-      
-        this.value = this.value.replace(/\D/g, '');
-
-        // restrict length to 10
+        this.value = this.value.replace(/\D/g, ''); // remove non-digits
         if (this.value.length > 10) {
-            this.value = this.value.slice(0, 10);
+            this.value = this.value.slice(0, 10); // max 10 digits
         }
-    );
-   
-
-
-   
-
+    });
